@@ -1,0 +1,171 @@
+{
+  "navigation": {
+    "about": "About",
+    "work": "What I work with",
+    "schedule": "Practice schedule",
+    "products": "Products & services",
+    "contact": "Contact"
+  },
+  "common": {
+    "copyright": "© 2026 Anya Ansu. All rights reserved."
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Thank you! Your message has been sent, I will reply soon.",
+    "error": "Couldn’t send the message. If your VPN is on, try turning it off and sending again. If it still doesn’t work, please try again later or email me at <a href='mailto:ansu.facilitator@gmail.com'>ansu.facilitator@gmail.com</a>."
+  },
+  "home": {
+    "hero": {
+      "kicker": "Breathwork & somatic facilitation",
+      "title": "Hi, I’m Anya Ansu",
+      "text": "I guide breathwork and somatic practices for more clarity, rest, and connection with the body.",
+      "cta": "Contact",
+      "imageAlt": "Facilitator portrait"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "A soft space for returning to yourself",
+      "lead": "I am a breathwork and somatic facilitator. My work brings together breathing, body awareness, and gentle exploration of inner states.",
+      "text": "I came to these practices through my own need — learning to listen to the body, return to myself, and find support within. Over time, this experience became something I wanted to share gently with others.",
+      "stats": [
+        {
+          "value": "5+",
+          "label": "years of personal practice"
+        },
+        {
+          "value": "300+",
+          "label": "hours of training"
+        },
+        {
+          "value": "2 formats",
+          "label": "individual and group"
+        }
+      ],
+      "imageAlt": "Portrait on the sand"
+    },
+    "work": {
+      "eyebrow": "What I work with",
+      "title": "Through the body, we&nbsp;can hear what has&nbsp;been asking for&nbsp;attention",
+      "subtitle": "The practices focus on the nervous system, breath, inner support, and restoring contact with yourself.",
+      "items": [
+        "stress and tension",
+        "difficulty resting",
+        "body connection",
+        "inner support",
+        "emotional regulation",
+        "gentle transitions"
+      ]
+    },
+    "schedule": {
+      "eyebrow": "Schedule",
+      "title": "Upcoming practices",
+      "items": [
+        {
+          "date": "June 12",
+          "title": "Alive breathwork: online group practice",
+          "format": "Zoom · 90 min"
+        },
+        {
+          "date": "Any time",
+          "title": "Somatic session for inner support",
+          "format": "audio · free"
+        },
+        {
+          "date": "Any time",
+          "title": "Breath for balance",
+          "format": "audio · free"
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "Kind words after practice",
+      "items": [
+        {
+          "quote": "After the session it felt quiet inside, as if my body finally exhaled.",
+          "author": "Maria"
+        },
+        {
+          "quote": "Very gentle facilitation and a clear structure for the practice.",
+          "author": "Anna"
+        },
+        {
+          "quote": "For the first time I felt I could be with myself without rushing.",
+          "author": "Elena"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Write if you would like to join a practice or&nbsp;ask a question"
+    }
+  },
+  "products": {
+    "eyebrow": "Products & services",
+    "title": "Practices for self-guided and individual work",
+    "intro": "Here you’ll find practices and support formats to help you slow down, return to the body, and feel more inner steadiness — on your own, in a group,<br>or through individual work.",
+    "items": [
+      {
+        "slug": "breathwork-library",
+        "title": "Breathwork practice library",
+        "href": "#",
+        "text": "A collection of audio and video practices for different states: rest, energy, clarity, and recovery.",
+        "detail": "A library for self-guided practice at your own pace. You can return to the recordings through different seasons, choosing shorter daily support or deeper sessions for inner exploration.",
+        "cta": "Details",
+        "image": "https://images.unsplash.com/photo-1516280238201-9db093c4020f?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "slug": "alive-breathwork-group",
+        "title": "Online group “Alive&nbsp;breathwork”",
+        "href": "https://forms.gle/Qxxrb5NJHJ8QKd1A6",
+        "text": "Regular group gatherings with breathwork practice, intention setting, and integration.",
+        "detail": "An online group for people who want rhythm, support, and live facilitation. Each meeting includes arrival, breathwork, a soft closing, and space for integration.",
+        "cta": "Details",
+        "ctaDetailed": "Register",
+        "image": "/images/products/alive-breathwork-group.png"
+      },
+      {
+        "slug": "free-breathwork-balance",
+        "title": "Free breathwork recording for&nbsp;balance",
+        "detail": "A gentle 6-minute breathwork practice for balance and grounding.<br>Using box breathing and guided visualization, this session helps calm the mind, regulate the nervous system, and reconnect you with a sense of inner stability and&nbsp;presence.",
+        "cta": "Listen",
+        "listen": true,
+        "image": "https://images.unsplash.com/photo-1632129022885-d8bdfcf1ec79?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "slug": "free-somatic-inner-support",
+        "title": "Free somatic recording for&nbsp;inner support",
+        "detail": "A somatic audio session for bringing attention back to the body and sensing inner support. It works well as a soft self-practice during the day.",
+        "cta": "Listen",
+        "listen": true,
+        "image": "https://images.unsplash.com/photo-1541834167531-0db139a8d22d?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "slug": "individual-breathwork-session",
+        "title": "Individual breathwork session",
+        "text": "A personal breathwork session shaped around your request, with preparation, facilitation, and integration.",
+        "detail": "A one-to-one session supports gentle exploration of a personal request through breath and body connection. We set the context before the practice and leave space for grounding and integration after.<br><br>Two formats: offline — €40, online — €35.",
+        "cta": "Details",
+        "individual": true,
+        "image": "https://images.unsplash.com/photo-1688612273104-7d1ee148edfe?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "slug": "individual-somatic-session",
+        "title": "Individual somatic session",
+        "text": "Gentle one-to-one work through body awareness, the nervous system, and internal resources.",
+        "detail": "A session for slowing down, listening to the body, and finding a steadier way to be with experience. The work is gentle and resource-oriented.<br><br>Two formats: offline — €25, online — €20.",
+        "cta": "Details",
+        "individual": true,
+        "image": "https://images.unsplash.com/photo-1602206999489-808fb1880af4?auto=format&fit=crop&w=1200&q=80"
+      }
+    ],
+    "detailLabel": "About this offer",
+    "back": "All products & services",
+    "contactCta": "Contact",
+    "listenCta": "Listen to recording"
+  }
+}
