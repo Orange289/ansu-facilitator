@@ -66,7 +66,7 @@ export function Footer() {
               )
             })}
           </div>
-          <p className="text-xs text-ink/52">{common("copyright")}</p>
+          <p className="text-xs text-ink/52">{common("copyright")}</p>test
         </div>
       </div>
     </footer>
