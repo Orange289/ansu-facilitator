@@ -55,19 +55,13 @@ export function Footer() {
                 <a
                   aria-label={item.label}
                   className={[
-                    "inline-flex h-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-ink",
-                    item.wide ? "w-auto gap-2 px-4" : "w-10",
+                    "inline-flex h-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-inkw-10",
                   ].join(" ")}
                   href={item.href}
                   key={item.label}
                   target="_blank"
                 >
                   <Icon size={17} />
-                  {item.wide ? (
-                    <span className="text-xs font-medium tracking-[0.08em]">
-                      Insight Timer
-                    </span>
-                  ) : null}
                 </a>
               )
             })}
