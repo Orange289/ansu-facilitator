@@ -54,9 +54,7 @@ export function Footer() {
               return (
                 <a
                   aria-label={item.label}
-                  className={[
-                    "inline-flex h-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-inkw-10",
-                  ].join(" ")}
+                  className="inline-flex h-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-inkw-10 w-10"
                   href={item.href}
                   key={item.label}
                   target="_blank"
@@ -66,7 +64,7 @@ export function Footer() {
               )
             })}
           </div>
-          <p className="text-xs text-ink/52">{common("copyright")}</p>test
+          <p className="text-xs text-ink/52">{common("copyright")}</p>
         </div>
       </div>
     </footer>
