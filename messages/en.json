@@ -65,9 +65,9 @@
       "title": "Upcoming practices",
       "items": [
         {
-          "date": "June 12",
+          "date": "June 20",
           "title": "Alive breathwork: online group practice",
-          "format": "Zoom · 90 min"
+          "format": "Zoom · 40 min"
         },
         {
           "date": "Any time",
@@ -148,7 +148,7 @@
         "slug": "individual-breathwork-session",
         "title": "Individual breathwork session",
         "text": "A personal breathwork session shaped around your request, with preparation, facilitation, and integration.",
-        "detail": "A one-to-one session supports gentle exploration of a personal request through breath and body connection. We set the context before the practice and leave space for grounding and integration after.<br><br>Two formats: offline — €40, online — €35.",
+        "detail": "A one-to-one session supports gentle exploration of a personal request through breath and body connection. We set the context before the practice and leave space for grounding and integration after.",
         "cta": "Details",
         "individual": true,
         "image": "https://images.unsplash.com/photo-1688612273104-7d1ee148edfe?auto=format&fit=crop&w=1200&q=80"
@@ -157,7 +157,7 @@
         "slug": "individual-somatic-session",
         "title": "Individual somatic session",
         "text": "Gentle one-to-one work through body awareness, the nervous system, and internal resources.",
-        "detail": "A session for slowing down, listening to the body, and finding a steadier way to be with experience. The work is gentle and resource-oriented.<br><br>Two formats: offline — €25, online — €20.",
+        "detail": "A session for slowing down, listening to the body, and finding a steadier way to be with experience. The work is gentle and resource-oriented.",
         "cta": "Details",
         "individual": true,
         "image": "https://images.unsplash.com/photo-1602206999489-808fb1880af4?auto=format&fit=crop&w=1200&q=80"

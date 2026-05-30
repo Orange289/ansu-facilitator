@@ -110,7 +110,7 @@ export default function HomePage() {
               {t("work.subtitle")}
             </p>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 grid-cols-2 lg:grid-cols-3">
             {workItems.map((item) => (
               <div
                 className="flex aspect-square items-center justify-center rounded-full border border-line/80 px-8 text-center text-sm uppercase tracking-[0.12em] text-ink/62 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-line hover:bg-line/10 hover:text-ink"
@@ -151,7 +151,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        {/* <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
           <SectionHeading
             eyebrow={t("testimonials.eyebrow")}
             title={t("testimonials.title")}
@@ -171,7 +171,7 @@ export default function HomePage() {
               </figure>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section
           className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 lg:grid-cols-[0.75fr_1fr]"

@@ -1,7 +1,7 @@
-import {Link} from "@/i18n/routing";
-import {LanguageSwitcher} from "./language-switcher";
-import {MobileMenu} from "./mobile-menu";
-import {NavLinks} from "./nav-links";
+import { Link } from "@/i18n/routing"
+import { LanguageSwitcher } from "./language-switcher"
+import { MobileMenu } from "./mobile-menu"
+import { NavLinks } from "./nav-links"
 
 export function Header() {
   return (
@@ -18,11 +18,11 @@ export function Header() {
           <NavLinks />
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="absolute right-20 lg:static">
           <LanguageSwitcher />
         </div>
         <MobileMenu />
       </div>
     </header>
-  );
+  )
 }

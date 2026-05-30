@@ -1,19 +1,18 @@
-"use client";
+"use client"
 
-import {Menu, X} from "lucide-react";
-import {useEffect, useState} from "react";
-import {LanguageSwitcher} from "./language-switcher";
-import {NavLinks} from "./nav-links";
+import { Menu, X } from "lucide-react"
+import { useEffect, useState } from "react"
+import { NavLinks } from "./nav-links"
 
 export function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.style.overflow = isOpen ? "hidden" : ""
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
 
   return (
     <div className="lg:hidden">
@@ -38,11 +37,11 @@ export function MobileMenu() {
           <nav className="grid gap-1 text-3xl font-light leading-tight text-ink">
             <NavLinks variant="mobile" onNavigate={() => setIsOpen(false)} />
           </nav>
-          <div className="border-t border-ink/10 pt-6">
+          {/* <div className="border-t border-ink/10 pt-6">
             <LanguageSwitcher />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -2,6 +2,7 @@
 
 import {useLocale} from "next-intl";
 import {usePathname, useRouter} from "@/i18n/routing";
+import { triggerPageTransition } from "./page-transition-loader"
 import {cn} from "@/lib/utils";
 
 export function LanguageSwitcher({className}: {className?: string}) {
@@ -25,7 +26,14 @@ export function LanguageSwitcher({className}: {className?: string}) {
               : "text-ink/60 hover:text-ink"
           )}
           key={nextLocale}
-          onClick={() => router.replace(pathname, {locale: nextLocale})}
+          onClick={() => {
+            if (locale === nextLocale) {
+              return
+            }
+
+            triggerPageTransition()
+            router.replace(pathname, {locale: nextLocale})
+          }}
           type="button"
         >
           {nextLocale}
