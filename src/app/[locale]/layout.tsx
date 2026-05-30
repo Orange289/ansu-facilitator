@@ -68,12 +68,12 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  const messages = await getMessages()
+  const messages = await getMessages({ locale })
 
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen font-sans antialiased">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <CustomCursor />
           <PageTransitionLoader />
           {children}

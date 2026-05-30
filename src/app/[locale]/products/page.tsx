@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ArrowRight, Headphones } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
 import { PageShell } from "@/components/site/page-shell"
@@ -15,8 +15,13 @@ type Product = {
   image: string
 }
 
-export default function ProductsPage() {
-  const t = useTranslations("products")
+export default async function ProductsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "products" })
   const products = t.raw("items") as Product[]
 
   return (

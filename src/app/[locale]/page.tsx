@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/site/contact-form"
 import { PageShell } from "@/components/site/page-shell"
@@ -10,8 +10,13 @@ import { Link } from "@/i18n/routing"
 type Practice = { date: string; title: string; format: string }
 type Testimonial = { quote: string; author: string }
 
-export default function HomePage() {
-  const t = useTranslations("home")
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "home" })
   const practices = t.raw("schedule.items") as Practice[]
   const workItems = t.raw("work.items") as string[]
   const testimonials = t.raw("testimonials.items") as Testimonial[]

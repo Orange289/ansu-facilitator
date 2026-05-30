@@ -50,7 +50,7 @@ export default async function ProductDetailPage({
   params: Promise<{ locale: string; slug: string }>
 }) {
   const { locale, slug } = await params
-  const t = await getTranslations("products")
+  const t = await getTranslations({ locale, namespace: "products" })
   const products = t.raw("items") as Product[]
   const product = products.find((item) => item.slug === slug)
   const audioSrc = getAudioSrc(slug, locale)
