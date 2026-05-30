@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { AudioPlayer } from "@/components/site/audio-player"
 import { PageShell } from "@/components/site/page-shell"
-import { Link } from "@/i18n/routing"
+import Link from "next/link"
 import { routing } from "@/i18n/routing"
 import { productSlugs } from "@/lib/products"
 
@@ -60,11 +60,11 @@ export default async function ProductDetailPage({
   }
 
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <main className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
         <Link
           className="inline-flex items-center gap-2 text-sm text-ink/58 transition-colors duration-300 hover:text-ink"
-          href="/products"
+          href={`/${locale}/products`}
         >
           <ArrowLeft size={16} />
           {t("back")}

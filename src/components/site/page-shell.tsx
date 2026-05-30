@@ -1,12 +1,18 @@
-import {Footer} from "./footer";
-import {Header} from "./header";
+import { Footer } from "./footer"
+import { Header } from "./header"
 
-export function PageShell({children}: {children: React.ReactNode}) {
+export function PageShell({
+  children,
+  locale,
+}: {
+  children: React.ReactNode
+  locale: string
+}) {
   return (
     <>
-      <Header />
+      <Header locale={locale} />
       {children}
-      <Footer />
+      <Footer locale={locale} />
     </>
-  );
+  )
 }

@@ -1,19 +1,17 @@
+import Link from "next/link"
 import { Instagram, Mail, MessageCircle, Send, TimerReset } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
-import { Link } from "@/i18n/routing"
+import { getTranslations } from "next-intl/server"
 import { LanguageSwitcher } from "./language-switcher"
 import { NavLinks } from "./nav-links"
 
-export function Footer() {
-  const common = useTranslations("common")
-  const locale = useLocale()
+export async function Footer({ locale }: { locale: string }) {
+  const common = await getTranslations({ locale, namespace: "common" })
 
   const socialItems = [
     {
       label: "Insight Timer",
       icon: TimerReset,
       href: "https://insighttimer.com/AnyaBreathwork",
-      // wide: true,
     },
     {
       label: "Instagram",
@@ -36,7 +34,7 @@ export function Footer() {
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
           <Link
             className="text-lg font-semibold tracking-[0.08em] text-ink transition-colors duration-300 hover:text-line"
-            href="/"
+            href={`/${locale}`}
           >
             Anya Ansu
           </Link>
@@ -54,7 +52,7 @@ export function Footer() {
               return (
                 <a
                   aria-label={item.label}
-                  className="inline-flex h-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-inkw-10 w-10"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 text-ink/70 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-line hover:bg-line/15 hover:text-ink"
                   href={item.href}
                   key={item.label}
                   target="_blank"

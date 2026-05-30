@@ -2,7 +2,7 @@ import Image from "next/image"
 import { ArrowRight, Headphones } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { Button } from "@/components/ui/button"
-import { Link } from "@/i18n/routing"
+import Link from "next/link"
 import { PageShell } from "@/components/site/page-shell"
 import { SectionHeading } from "@/components/site/section-heading"
 
@@ -25,7 +25,7 @@ export default async function ProductsPage({
   const products = t.raw("items") as Product[]
 
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <main className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1fr] lg:items-end">
           <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
@@ -42,7 +42,7 @@ export default async function ProductsPage({
               key={product.title}
             >
               <Link
-                href={`/products/${product.slug}`}
+                href={`/${locale}/products/${product.slug}`}
                 className="group grid gap-5 border-t border-ink/12 pt-8 transition-colors duration-500 ease-out hover:border-line md:grid-cols-[0.78fr_1.1fr_0.38fr] md:items-center"
               >
                 <div>

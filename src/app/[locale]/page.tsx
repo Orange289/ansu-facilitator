@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/site/contact-form"
 import { PageShell } from "@/components/site/page-shell"
 import { SectionHeading } from "@/components/site/section-heading"
-import { Link } from "@/i18n/routing"
+import Link from "next/link"
 
 type Practice = { date: string; title: string; format: string }
-type Testimonial = { quote: string; author: string }
-
 export default async function HomePage({
   params,
 }: {
@@ -19,15 +17,22 @@ export default async function HomePage({
   const t = await getTranslations({ locale, namespace: "home" })
   const practices = t.raw("schedule.items") as Practice[]
   const workItems = t.raw("work.items") as string[]
-  const testimonials = t.raw("testimonials.items") as Testimonial[]
-  const practicesLinks = [
-    "/products/alive-breathwork-group",
-    "/products/free-somatic-inner-support",
-    "/products/free-breathwork-balance",
-  ]
+  const practicesLinks =
+    locale === "ru"
+      ? [
+          "/products/individual-somatic-session",
+          "/products/alive-breathwork-group",
+          "/products/free-somatic-inner-support",
+          "/products/free-breathwork-balance",
+        ]
+      : [
+          "/products/alive-breathwork-group",
+          "/products/free-somatic-inner-support",
+          "/products/free-breathwork-balance",
+        ]
 
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <main>
         <section className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-5 py-14 md:px-8 lg:grid-cols-[1fr_0.78fr] lg:py-20">
           <div className="order-2 lg:order-1">
@@ -137,7 +142,7 @@ export default async function HomePage({
               {practices.map((practice, index) => (
                 <Link
                   className="group grid gap-4 py-6 transition-colors duration-300 ease-out hover:bg-line/8 md:grid-cols-[0.3fr_1fr_0.3fr] md:items-center"
-                  href={practicesLinks[index]}
+                  href={`/${locale}${practicesLinks[index]}`}
                   key={practice.title}
                 >
                   <p className="text-sm uppercase tracking-[0.18em] text-ink/44 transition-colors duration-300 group-hover:text-ink/60">
