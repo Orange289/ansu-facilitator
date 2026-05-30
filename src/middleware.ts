@@ -28,6 +28,19 @@ function getPreferredLocale(request: NextRequest): Locale {
   return browserLocale ?? routing.defaultLocale
 }
 
+function getForwardedValue(value: string | null) {
+  return value?.split(",")[0]?.trim()
+}
+
+function getRequestOrigin(request: NextRequest) {
+  const forwardedProto = getForwardedValue(request.headers.get("x-forwarded-proto"))
+  const forwardedHost = getForwardedValue(request.headers.get("x-forwarded-host"))
+  const host = forwardedHost ?? request.headers.get("host") ?? request.nextUrl.host
+  const protocol = forwardedProto ?? (host.includes("localhost") ? "http" : "https")
+
+  return `${protocol}://${host}`
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl
 
@@ -37,12 +50,10 @@ export default function middleware(request: NextRequest) {
 
   const locale = getPreferredLocale(request)
   const localizedPathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`
-  const response = new NextResponse(null, {
-    status: 307,
-    headers: {
-      Location: `${localizedPathname}${search}`,
-    },
-  })
+  const response = NextResponse.redirect(
+    new URL(`${localizedPathname}${search}`, getRequestOrigin(request)),
+    307,
+  )
 
   response.cookies.set(localeCookieName, locale, {
     path: "/",
