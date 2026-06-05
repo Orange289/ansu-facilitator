@@ -49,7 +49,19 @@ jobs:
             NEXT_PRIVATE_BUILD_WORKER=0 npm run build
 
             sudo /usr/bin/systemctl restart anyaansu.service
-            sudo /usr/bin/systemctl status anyaansu.service --no-pager
 
-            curl -fsS http://127.0.0.1:3000/ru > /dev/null
+            for i in {1..30}; do
+              if curl -fsS http://127.0.0.1:3000/ru > /dev/null; then
+                echo "App is responding"
+                sudo /usr/bin/systemctl status anyaansu.service --no-pager
+                exit 0
+              fi
+
+              echo "Waiting for app... attempt $i"
+              sleep 2
+            done
+
+            echo "App did not respond in time"
+            sudo /usr/bin/systemctl status anyaansu.service --no-pager
+            exit 1
           EOF
