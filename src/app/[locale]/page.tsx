@@ -173,7 +173,7 @@ export default async function HomePage({
         </section>
 
         <section
-          className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 lg:grid-cols-[0.75fr_1fr]"
+          className="test mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 lg:grid-cols-[0.75fr_1fr]"
           id="contact"
         >
           <SectionHeading

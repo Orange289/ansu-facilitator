@@ -1,0 +1,55 @@
+name: Deploy production
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/vps_key
+          chmod 600 ~/.ssh/vps_key
+          ssh-keyscan -p "${{ secrets.VPS_PORT }}" "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy prod branch to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_PORT: ${{ secrets.VPS_PORT }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          ssh -i ~/.ssh/vps_key -p "$VPS_PORT" "$VPS_USER@$VPS_HOST" "bash -s" <<'EOF'
+            set -euo pipefail
+
+            cd /var/www/anyaansu-facilitator
+
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "Server worktree has local changes. Deployment stopped."
+              git status --short
+              exit 1
+            fi
+
+            git fetch origin prod --prune
+
+            if git show-ref --verify --quiet refs/heads/prod; then
+              git checkout prod
+            else
+              git checkout -b prod origin/prod
+            fi
+
+            git pull --ff-only origin prod
+
+            npm ci
+            NEXT_PRIVATE_BUILD_WORKER=0 npm run build
+
+            sudo /usr/bin/systemctl restart anyaansu.service
+            sudo /usr/bin/systemctl status anyaansu.service --no-pager
+
+            curl -fsS http://127.0.0.1:3000/ru > /dev/null
+          EOF
