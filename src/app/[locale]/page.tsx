@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/site/contact-form"
 import { PageShell } from "@/components/site/page-shell"
 import { SectionHeading } from "@/components/site/section-heading"
+import { TestimonialsSlider } from "@/components/site/testimonials-slider"
 import Link from "next/link"
 
 type Practice = { date: string; title: string; format: string }
+type Testimonial = { quote: string; author: string }
 export default async function HomePage({
   params,
 }: {
@@ -17,6 +19,7 @@ export default async function HomePage({
   const t = await getTranslations({ locale, namespace: "home" })
   const practices = t.raw("schedule.items") as Practice[]
   const workItems = t.raw("work.items") as string[]
+  const testimonials = t.raw("testimonials.items") as Testimonial[]
   const practicesLinks =
     locale === "ru"
       ? [
@@ -161,27 +164,13 @@ export default async function HomePage({
           </div>
         </section>
 
-        {/* <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
           <SectionHeading
             eyebrow={t("testimonials.eyebrow")}
             title={t("testimonials.title")}
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <figure
-                className="rounded-[6px] border border-ink/12 bg-background/70 p-7"
-                key={item.author}
-              >
-                <blockquote className="text-lg leading-8 text-ink/70">
-                  “{item.quote}”
-                </blockquote>
-                <figcaption className="mt-6 text-sm uppercase tracking-[0.16em] text-ink/40">
-                  {item.author}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </section> */}
+          <TestimonialsSlider items={testimonials} locale={locale} />
+        </section>
 
         <section
           className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 lg:grid-cols-[0.75fr_1fr]"

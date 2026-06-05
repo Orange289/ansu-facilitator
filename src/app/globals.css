@@ -96,3 +96,11 @@ section {
     width: 100%;
   }
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
