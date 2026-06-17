@@ -5,6 +5,7 @@ import { notFound } from "next/navigation"
 import { Inter, Playfair_Display } from "next/font/google"
 import { CustomCursor } from "@/components/site/custom-cursor"
 import { PageTransitionLoader } from "@/components/site/page-transition-loader"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { routing } from "@/i18n/routing"
 import "../globals.css"
 
@@ -39,7 +40,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
-  const metadata = localizedMetadata[locale as keyof typeof localizedMetadata] ?? localizedMetadata.ru
+  const metadata =
+    localizedMetadata[locale as keyof typeof localizedMetadata] ??
+    localizedMetadata.ru
 
   return {
     ...metadata,
@@ -79,6 +82,9 @@ export default async function LocaleLayout({
           {children}
         </NextIntlClientProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID ? (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      ) : null}
     </html>
   )
 }
