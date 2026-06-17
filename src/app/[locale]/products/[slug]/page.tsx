@@ -112,7 +112,7 @@ export default async function ProductDetailPage({
               </>
             )}
 
-            {!product.listen ? (
+            {!product.listen && product.href ? (
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild>
                   <Link
