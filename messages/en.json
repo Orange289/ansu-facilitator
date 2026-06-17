@@ -65,7 +65,13 @@
       "title": "Upcoming practices",
       "items": [
         {
-          "date": "June 20",
+          "date": "June 27",
+          "title": "'Transition' Breathwork Session",
+          "format": "Zoom · 40 мин",
+          "newTab": true
+        },
+        {
+          "date": "July 5",
           "title": "Alive breathwork: online group practice",
           "format": "Zoom · 40 min"
         },

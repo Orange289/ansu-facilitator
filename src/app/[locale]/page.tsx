@@ -8,7 +8,12 @@ import { SectionHeading } from "@/components/site/section-heading"
 import { TestimonialsSlider } from "@/components/site/testimonials-slider"
 import Link from "next/link"
 
-type Practice = { date: string; title: string; format: string }
+type Practice = {
+  date: string
+  title: string
+  format: string
+  newTab?: boolean
+}
 type Testimonial = { quote: string; author: string }
 export default async function HomePage({
   params,
@@ -23,12 +28,14 @@ export default async function HomePage({
   const practicesLinks =
     locale === "ru"
       ? [
-          "/products/individual-somatic-session",
+          "https://forms.gle/hKek2YGBB3qZurvN7",
+          "https://forms.gle/qMGLJfthnPSabXmo9",
           "/products/alive-breathwork-group",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
         ]
       : [
+          "https://forms.gle/GZanBFGeNREfBtNr7",
           "/products/alive-breathwork-group",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
@@ -145,8 +152,9 @@ export default async function HomePage({
               {practices.map((practice, index) => (
                 <Link
                   className="group grid gap-4 py-6 transition-colors duration-300 ease-out hover:bg-line/8 md:grid-cols-[0.3fr_1fr_0.3fr] md:items-center"
-                  href={`/${locale}${practicesLinks[index]}`}
+                  href={`${practicesLinks[index]}`}
                   key={practice.title}
+                  target={practice.newTab ? "_blank" : "_self"}
                 >
                   <p className="text-sm uppercase tracking-[0.18em] text-ink/44 transition-colors duration-300 group-hover:text-ink/60">
                     {practice.date}
