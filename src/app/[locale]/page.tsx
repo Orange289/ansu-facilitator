@@ -28,12 +28,13 @@ export default async function HomePage({
   const practicesLinks =
     locale === "ru"
       ? [
-          "https://forms.gle/FAYi4dstF1JUT1D47",
+          // "https://forms.gle/FAYi4dstF1JUT1D47",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
         ]
       : [
-          "https://forms.gle/FAYi4dstF1JUT1D47",
+          "https://forms.gle/BUYiSFhdJr3o67rD8",
+          "https://forms.gle/TbiiaNrayPpJmNVD9",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
         ]

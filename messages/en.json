@@ -65,9 +65,16 @@
       "title": "Upcoming practices",
       "items": [
         {
-          "date": "July 5",
-          "title": "Alive breathwork: online group practice",
-          "format": "Zoom · 40 min"
+          "date": "July 12",
+          "title": "Alive Breathwork - online breathwork group",
+          "format": "Zoom · 40 minutes",
+          "newTab": true
+        },
+        {
+          "date": "July 18",
+          "title": "Somatics Group: Feedback Loops, Co-Regulation & Touch",
+          "format": "Studio in Lisbon · 2 hours",
+          "newTab": true
         },
         {
           "date": "Any time",
