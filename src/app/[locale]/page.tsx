@@ -34,7 +34,7 @@ export default async function HomePage({
         ]
       : [
           "https://forms.gle/BUYiSFhdJr3o67rD8",
-          "https://forms.gle/TbiiaNrayPpJmNVD9",
+          "https://forms.gle/EPhxb713c1nWGRAf6",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
         ]
