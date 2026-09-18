@@ -33,8 +33,7 @@ export default async function HomePage({
           "/products/free-breathwork-balance",
         ]
       : [
-          "https://forms.gle/BUYiSFhdJr3o67rD8",
-          "https://www.meetup.com/breathwork-online-and-in-lisbon/events/316144128",
+          "https://forms.gle/C55up3KYwU7vchEf9",
           "/products/free-somatic-inner-support",
           "/products/free-breathwork-balance",
         ]
