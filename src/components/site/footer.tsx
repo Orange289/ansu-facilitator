@@ -62,7 +62,15 @@ export async function Footer({ locale }: { locale: string }) {
               )
             })}
           </div>
-          <p className="text-xs text-ink/52">{common("copyright")}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link
+              className="text-xs text-ink/52 transition-colors duration-300 ease-out hover:text-ink"
+              href={`/${locale}/documents`}
+            >
+              {common("documents")}
+            </Link>
+            <p className="text-xs text-ink/52">{common("copyright")}</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,7 +7,8 @@
     "contact": "Связаться"
   },
   "common": {
-    "copyright": "© 2026 Anya Ansu. Все права защищены."
+    "copyright": "© 2026 Anya Ansu. Все права защищены.",
+    "documents": "Документы"
   },
   "contact": {
     "name": "Имя",
@@ -201,5 +202,37 @@
     "back": "Все продукты и услуги",
     "contactCta": "Связаться",
     "listenCta": "Слушать запись"
+  },
+  "documents": {
+    "eyebrow": "Документы",
+    "title": "Правовые документы сайта",
+    "openCta": "Открыть PDF",
+    "format": "PDF",
+    "items": [
+      {
+        "slug": "polzovatelskoe-soglashenie",
+        "title": "Пользовательское соглашение",
+        "text": "Условия пользования сайтом: что именно я предлагаю, как оформляется участие в практиках и какие правила действуют для обеих сторон.",
+        "file": "/documents/polzovatelskoe-soglashenie.pdf"
+      },
+      {
+        "slug": "politika-konfidencialnosti",
+        "title": "Политика конфиденциальности",
+        "text": "Какие персональные данные я собираю, с какой целью, сколько храню и как защищаю, а также какие права есть у вас.",
+        "file": "/documents/politika-konfidencialnosti.pdf"
+      },
+      {
+        "slug": "soglasie-na-obrabotku-pd",
+        "title": "Согласие на обработку персональных данных",
+        "text": "Текст согласия, которое вы даёте, отправляя форму на сайте: перечень данных, действий с ними и порядок отзыва согласия.",
+        "file": "/documents/soglasie-na-obrabotku-pd.pdf"
+      },
+      {
+        "slug": "politika-cookie",
+        "title": "Политика в отношении файлов cookie",
+        "text": "Какие файлы cookie использует сайт, для чего они нужны и как вы можете управлять ими в своём браузере.",
+        "file": "/documents/politika-cookie.pdf"
+      }
+    ]
   }
 }

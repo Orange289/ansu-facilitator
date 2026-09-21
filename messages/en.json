@@ -7,7 +7,8 @@
     "contact": "Contact"
   },
   "common": {
-    "copyright": "© 2026 Anya Ansu. All rights reserved."
+    "copyright": "© 2026 Anya Ansu. All rights reserved.",
+    "documents": "Documents"
   },
   "contact": {
     "name": "Name",
@@ -219,5 +220,38 @@
     "back": "All products & services",
     "contactCta": "Contact",
     "listenCta": "Listen to recording"
+  },
+  "documents": {
+    "eyebrow": "Documents",
+    "title": "Legal documents",
+    "openCta": "Open PDF",
+    "format": "PDF",
+    "note": "Please note: all documents are available in Russian only. They are drawn up under Russian law, and the Russian text is the legally binding version. If you need help understanding any of them, feel free to get in touch.",
+    "items": [
+      {
+        "slug": "polzovatelskoe-soglashenie",
+        "title": "Terms of use",
+        "text": "The terms of using this website: what is offered here, how you sign up for a practice, and the rules that apply to both sides.",
+        "file": "/documents/polzovatelskoe-soglashenie.pdf"
+      },
+      {
+        "slug": "politika-konfidencialnosti",
+        "title": "Privacy policy",
+        "text": "What personal data is collected, why, how long it is kept and how it is protected — along with the rights you have over it.",
+        "file": "/documents/politika-konfidencialnosti.pdf"
+      },
+      {
+        "slug": "soglasie-na-obrabotku-pd",
+        "title": "Consent to the processing of personal data",
+        "text": "The consent you give when you submit a form on this site: the data covered, what may be done with it, and how to withdraw consent.",
+        "file": "/documents/soglasie-na-obrabotku-pd.pdf"
+      },
+      {
+        "slug": "politika-cookie",
+        "title": "Cookie policy",
+        "text": "Which cookies this website uses, what they are for, and how you can manage them in your browser.",
+        "file": "/documents/politika-cookie.pdf"
+      }
+    ]
   }
 }
